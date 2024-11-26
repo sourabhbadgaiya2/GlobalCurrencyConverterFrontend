@@ -38,6 +38,12 @@ const App = () => {
     }
   };
 
+  // **Add the React DevTools code condition here to only enable in development**
+  if (process.env.NODE_ENV === "development") {
+    const ReactDevTools = require("react-devtools");
+    ReactDevTools.connect(); // This will only run in development mode
+  }
+
   return (
     <div className='min-h-screen flex flex-col items-center bg-gray-100'>
       {/* Header Section */}
