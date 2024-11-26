@@ -19,6 +19,8 @@ const App = () => {
   };
 
   const handleSubmit = async (e) => {
+    console.log("clicked");
+
     e.preventDefault();
     try {
       const response = await axios.post(
